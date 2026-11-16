@@ -1,7 +1,7 @@
 let data = msg.payload;
 let temp = data.temp;
 
-let status = "";
+let status = "safe";
 let fanon = false;
 
 if (temp > 9 ){
@@ -10,8 +10,11 @@ if (temp > 9 ){
 }
 let msg1 = {
     payload: temp,
-    status: status,
+    
 };
+let msg2 ={
+    status: "safe"
+}
 
 
-return msg1
+return {msg1, msg2}
